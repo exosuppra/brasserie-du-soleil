@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>La Brasserie du Soleil — L'ardoise du jour · Gréoux-les-Bains</title>
+<meta name="description" content="Brasserie et pizzeria à Gréoux-les-Bains : ardoise du jour à 16,50 €, pizzas au feu de bois, tartare préparé minute. Ouvert 7j/7 de 7h à 1h. 04 92 78 01 53." />
+<meta name="theme-color" content="#1F2A26" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='10' fill='%231F2A26'/%3E%3Ctext y='.92em' x='14' font-size='74' fill='%23F2EFE6'%3E%E2%98%80%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --ardoise:#1F2A26; --ardoise2:#16201D; --ardoise3:#293630;
+  --craie:#F2EFE6; --craie2:#BFD6CF; --craie-f:rgba(242,239,230,.52);
+  --laiton:#C8A34E; --bois:#8A5A38; --abricot:#E8A05C;
+  --trait:rgba(242,239,230,.22);
+  --main:255px 15px 225px 15px/15px 225px 15px 255px; /* cadre tracé à la main */
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Barlow',system-ui,sans-serif;color:var(--craie);background:var(--ardoise);line-height:1.62;
+  font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative}
+/* poussière de craie */
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.06;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23c)'/%3E%3C/svg%3E")}
+body>*{position:relative;z-index:1}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+
+/* --- écriture craie --- */
+.craie{font-family:'Caveat',cursive;font-weight:700;line-height:1.02}
+h1,h2{font-family:'Caveat',cursive;font-weight:700;line-height:1;letter-spacing:.005em}
+h2{font-size:clamp(46px,7vw,88px)}
+h3{font-family:'Barlow',sans-serif;font-weight:600;font-size:20px;letter-spacing:.01em}
+.sur{display:inline-flex;align-items:center;gap:9px;font-size:11.5px;font-weight:600;letter-spacing:.26em;
+  text-transform:uppercase;color:var(--laiton)}
+.sur::before{content:"";width:26px;height:1px;background:var(--laiton)}
+p.big{font-size:clamp(15.5px,1.7vw,18px);max-width:58ch;color:rgba(242,239,230,.78)}
+/* soulignement à la craie */
+.souligne{position:relative;display:inline-block}
+.souligne::after{content:"";position:absolute;left:-2%;right:-2%;bottom:.02em;height:.14em;
+  background:var(--laiton);opacity:.85;
+  -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 12' preserveAspectRatio='none'%3E%3Cpath d='M2 8 C 60 2, 110 11, 168 5 S 260 3, 298 7' stroke='black' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 12' preserveAspectRatio='none'%3E%3Cpath d='M2 8 C 60 2, 110 11, 168 5 S 260 3, 298 7' stroke='black' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  -webkit-mask-size:100% 100%;mask-size:100% 100%}
+
+/* --- boutons --- */
+.btn{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-family:'Barlow',sans-serif;
+  font-weight:600;font-size:14.5px;padding:13px 25px;border:2px solid var(--craie);
+  border-radius:var(--main);transition:.28s cubic-bezier(.2,.8,.2,1)}
+.btn-l{background:var(--laiton);border-color:var(--laiton);color:var(--ardoise2)}
+.btn-l:hover{background:var(--abricot);border-color:var(--abricot);transform:translateY(-2px) rotate(-.6deg)}
+.btn-c{background:transparent;color:var(--craie)}
+.btn-c:hover{background:rgba(242,239,230,.1);transform:translateY(-2px) rotate(.6deg)}
+
+/* --- barre bois + nav --- */
+.bois{background:linear-gradient(180deg,#9B6740,#7A4E30);border-bottom:2px solid rgba(0,0,0,.35);
+  color:#F6E7D6;font-size:12.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:8px 0}
+.bois .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.bois a{text-decoration:none}
+.bois a:hover{color:#fff}
+.nav{position:sticky;top:0;z-index:60;background:rgba(31,42,38,.94);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--trait)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:13px 0}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand .mark{width:40px;height:40px;flex:none;border:2px solid var(--craie);border-radius:var(--main);
+  display:grid;place-items:center;font-size:19px;line-height:1}
+.brand b{font-family:'Caveat',cursive;font-weight:700;font-size:26px;line-height:.95;display:block}
+.brand span{display:block;font-size:9.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--craie-f)}
+.links{display:flex;gap:28px;list-style:none}
+.links a{text-decoration:none;font-size:14px;font-weight:500;color:rgba(242,239,230,.74);transition:.22s}
+.links a:hover{color:var(--laiton)}
+.burger{display:none;background:transparent;border:2px solid var(--craie);border-radius:var(--main);cursor:pointer;padding:9px 11px}
+.burger span{display:block;width:19px;height:2px;background:var(--craie);margin:4px 0}
+.drawer{display:none}
+@media(max-width:980px){
+  .links,.nav .btn{display:none}
+  .burger{display:block}
+  .drawer{position:fixed;inset:0;z-index:80;background:var(--ardoise2);display:flex;flex-direction:column;
+    align-items:center;justify-content:center;gap:20px;opacity:0;pointer-events:none;transition:opacity .25s}
+  .drawer.open{opacity:1;pointer-events:auto}
+  .drawer a{text-decoration:none;font-family:'Caveat',cursive;font-weight:700;font-size:40px}
+  .drawer .close{position:absolute;top:18px;right:24px;font-size:38px;background:none;border:0;color:var(--craie);cursor:pointer;line-height:1}
+}
+
+/* --- héros --- */
+.hero{padding:70px 0 78px;position:relative;overflow:hidden}
+.hero-in{display:grid;grid-template-columns:1.06fr .94fr;gap:56px;align-items:center}
+@media(max-width:980px){.hero-in{grid-template-columns:1fr;gap:48px}}
+.hero h1{font-size:clamp(58px,10.5vw,140px)}
+.hero h1 .l{display:block;overflow:hidden}
+.hero h1 .l>span{display:block}
+.hero h1 em{font-style:normal;color:var(--laiton)}
+.hero p.big{margin-top:20px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:13px;margin-top:30px}
+.hero-facts{display:flex;flex-wrap:wrap;gap:22px;margin-top:34px;padding-top:24px;border-top:1px dashed var(--trait)}
+.hero-facts div b{display:block;font-family:'Caveat',cursive;font-weight:700;font-size:36px;color:var(--laiton);line-height:.9}
+.hero-facts div span{font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--craie-f)}
+
+/* polaroids */
+.polas{position:relative;height:clamp(360px,44vw,520px)}
+.pola{position:absolute;background:#F6F3EA;padding:11px 11px 42px;box-shadow:0 26px 46px -22px rgba(0,0,0,.75);
+  border-radius:2px}
+.pola img{width:100%;height:100%;object-fit:cover;display:block}
+.pola .cap{position:absolute;left:8px;right:8px;bottom:10px;text-align:center;font-family:'Caveat',cursive;
+  font-weight:600;font-size:19px;color:#2C3A34;line-height:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pola::before{content:"";position:absolute;left:50%;top:-13px;transform:translateX(-50%) rotate(-2deg);
+  width:78px;height:24px;background:rgba(216,205,178,.72);box-shadow:0 2px 6px rgba(0,0,0,.25)}
+/* Disposition sans recouvrement des légendes : a en haut à gauche, b à droite, c en bas. */
+.pola.a{width:50%;height:56%;left:0;top:0;rotate:-5deg}
+.pola.b{width:44%;height:50%;right:0;top:9%;rotate:4.5deg}
+.pola.c{width:43%;height:43%;left:17%;bottom:0;rotate:-1.5deg;z-index:3}
+.pola .inner{height:100%;overflow:hidden}
+@media(max-width:620px){
+  .polas{height:330px}
+  .pola.a{width:64%;height:64%;left:0;top:0}
+  .pola.b{display:none}
+  .pola.c{width:58%;height:52%;left:38%;bottom:0}
+}
+
+/* --- bandeau ardoise du jour --- */
+.jour{border-block:1px dashed var(--trait);background:var(--ardoise3);padding:26px 0;overflow:hidden;white-space:nowrap}
+.jour-in{display:inline-flex;animation:mq 44s linear infinite;font-family:'Caveat',cursive;font-weight:700;font-size:32px}
+.jour-in span{padding:0 30px;display:inline-flex;align-items:center;gap:30px;color:rgba(242,239,230,.9)}
+.jour-in span::after{content:"✦";color:var(--laiton);font-size:17px}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* --- sections --- */
+.sec{padding:clamp(62px,8vw,110px) 0}
+.sec.fonce{background:var(--ardoise2)}
+.sec-head{max-width:660px;margin-bottom:48px}
+.sec-head h2{margin:14px 0 14px}
+.sec-head.c{margin-inline:auto;text-align:center}
+.sec-head.c p.big{margin-inline:auto}
+
+/* --- la maison --- */
+.maison{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+@media(max-width:900px){.maison{grid-template-columns:1fr;gap:38px}}
+.cadre{border:2px solid var(--trait);border-radius:var(--main);padding:8px}
+.cadre img{border-radius:var(--main);width:100%;height:100%;object-fit:cover;aspect-ratio:5/4}
+.notes{display:grid;gap:16px;margin-top:28px}
+.note{display:flex;gap:14px;align-items:flex-start}
+.note .b{width:30px;height:30px;flex:none;border:2px solid var(--laiton);border-radius:var(--main);
+  display:grid;place-items:center;font-family:'Caveat',cursive;font-weight:700;font-size:17px;color:var(--laiton)}
+.note p{font-size:15.4px;color:rgba(242,239,230,.8)}
+.note b{color:var(--craie);font-weight:600}
+
+/* --- la carte : vraie ardoise --- */
+.tableau{border:3px solid var(--bois);background:var(--ardoise);padding:clamp(26px,4vw,52px);
+  box-shadow:inset 0 0 90px rgba(0,0,0,.5), 0 30px 60px -34px rgba(0,0,0,.9);position:relative}
+.tableau::after{content:"";position:absolute;inset:10px;border:1px dashed var(--trait);pointer-events:none}
+.tableau-head{text-align:center;margin-bottom:38px}
+.tableau-head .t{font-family:'Caveat',cursive;font-weight:700;font-size:clamp(38px,5.4vw,62px);line-height:1}
+.tableau-head .s{font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--laiton);margin-top:8px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:14px 54px}
+@media(max-width:860px){.cols{grid-template-columns:1fr;gap:8px}}
+.grp{margin-bottom:30px}
+.grp>h3{font-family:'Caveat',cursive;font-weight:700;font-size:34px;color:var(--laiton);margin-bottom:6px}
+.grp>.hint{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--craie-f);margin-bottom:14px}
+.li{display:flex;align-items:baseline;gap:10px;padding:8px 0}
+.li .n{font-size:15.6px;font-weight:400}
+.li .n small{display:block;font-size:12.8px;color:var(--craie-f)}
+.li .f{flex:1;border-bottom:1px dotted var(--trait);transform:translateY(-3px)}
+.li .p{font-family:'Caveat',cursive;font-weight:700;font-size:25px;color:var(--craie);white-space:nowrap;line-height:1}
+.li .p.soft{font-family:'Barlow',sans-serif;font-weight:500;font-size:12.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--craie-f)}
+
+/* --- menu du jour --- */
+.deal{text-align:center;padding:clamp(56px,7.5vw,96px) 0;background:var(--ardoise2);
+  border-block:1px dashed var(--trait)}
+.deal .prix{font-family:'Caveat',cursive;font-weight:700;font-size:clamp(96px,19vw,230px);line-height:.8;color:var(--laiton)}
+.deal h2{font-size:clamp(34px,4.6vw,58px);margin:14px 0 12px}
+.deal p{max-width:46ch;margin:0 auto 28px;color:rgba(242,239,230,.72)}
+
+/* --- avis épinglés --- */
+.avis{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+@media(max-width:980px){.avis{grid-template-columns:1fr}}
+.papier{background:#F6F3EA;color:#2C3A34;padding:26px 24px 22px;position:relative;border-radius:2px;
+  box-shadow:0 22px 40px -22px rgba(0,0,0,.8)}
+/* `rotate` (propriété autonome) et non `transform` : la révélation au scroll
+   remet `transform` à none et effacerait l'inclinaison. */
+.avis .papier:nth-child(3n-2){rotate:-1.4deg}
+.avis .papier:nth-child(3n-1){rotate:.9deg}
+.avis .papier:nth-child(3n){rotate:-.5deg}
+.papier::before{content:"";position:absolute;left:50%;top:-11px;transform:translateX(-50%);width:16px;height:16px;
+  border-radius:50%;background:var(--bois);box-shadow:0 3px 7px rgba(0,0,0,.45), inset 0 -3px 5px rgba(0,0,0,.3)}
+.papier .st{color:var(--bois);letter-spacing:2px;font-size:14px}
+.papier p{margin:11px 0 16px;font-family:'Caveat',cursive;font-weight:600;font-size:21px;line-height:1.34}
+.papier .who{display:flex;align-items:center;gap:10px;border-top:1px dashed rgba(44,58,52,.3);padding-top:13px}
+.papier .who b{display:block;font-size:14px;font-weight:600}
+.papier .who span{font-size:12px;color:rgba(44,58,52,.62)}
+
+/* --- infos --- */
+.infos{display:grid;grid-template-columns:1fr 1.05fr;gap:26px;align-items:start}
+@media(max-width:900px){.infos{grid-template-columns:1fr}}
+.panneau{border:2px solid var(--trait);border-radius:var(--main);padding:32px 30px}
+.row{display:flex;gap:15px;padding:16px 0;border-bottom:1px dashed var(--trait)}
+.row:last-of-type{border-bottom:0}
+.row .ic{width:40px;height:40px;flex:none;border:2px solid var(--laiton);border-radius:var(--main);
+  display:grid;place-items:center;font-size:17px}
+.row b{display:block;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--laiton)}
+.row p,.row a{font-size:15.6px;font-weight:400;text-decoration:none}
+.row a:hover{color:var(--laiton)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.tag{font-size:12.5px;font-weight:500;border:1px dashed var(--trait);border-radius:var(--main);padding:6px 14px;
+  color:rgba(242,239,230,.8)}
+.map{border:2px solid var(--trait);border-radius:var(--main);overflow:hidden;min-height:460px}
+.map iframe{width:100%;height:100%;min-height:460px;border:0;display:block;
+  filter:invert(.9) hue-rotate(160deg) saturate(.5) brightness(.92)}
+
+/* --- pied de page --- */
+footer{background:var(--ardoise2);border-top:1px dashed var(--trait);padding:54px 0 28px;color:rgba(242,239,230,.62);font-size:14.5px}
+.f-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:36px;padding-bottom:30px;border-bottom:1px dashed var(--trait)}
+@media(max-width:820px){.f-grid{grid-template-columns:1fr;gap:26px}}
+footer h4{font-family:'Caveat',cursive;font-weight:700;font-size:24px;color:var(--laiton);margin-bottom:10px}
+footer ul{list-style:none;display:grid;gap:8px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--craie)}
+.f-bot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:20px;font-size:12.5px;color:rgba(242,239,230,.42)}
+
+.rv{opacity:0;transform:translateY(26px)}
+@media(prefers-reduced-motion:reduce){
+  .rv{opacity:1!important;transform:none!important}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="bois">
+  <div class="wrap">
+    <span>Ouvert 7j/7 · 7h – 1h</span>
+    <span>Rond-point du Grysélis, Gréoux-les-Bains</span>
+    <a href="tel:+33492780153">Réservations : 04 92 78 01 53</a>
+  </div>
+</div>
+
+<div class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top"><span class="mark" aria-hidden="true">☀</span><b>La Brasserie du Soleil<span>Gréoux-les-Bains</span></b></a>
+    <ul class="links">
+      <li><a href="#maison">La maison</a></li>
+      <li><a href="#carte">L'ardoise</a></li>
+      <li><a href="#avis">Avis</a></li>
+      <li><a href="#infos">Infos</a></li>
+    </ul>
+    <a class="btn btn-l" href="tel:+33492780153">Réserver</a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+  </div>
+</div>
+<nav class="drawer" id="drawer" aria-label="Menu mobile">
+  <button class="close" id="close" aria-label="Fermer">×</button>
+  <a href="#maison">La maison</a><a href="#carte">L'ardoise</a><a href="#avis">Avis</a><a href="#infos">Infos</a>
+  <a class="btn btn-l" href="tel:+33492780153">04 92 78 01 53</a>
+</nav>
+
+<!-- ============ HÉROS ============ -->
+<header class="hero" id="top">
+  <div class="wrap hero-in">
+    <div>
+      <span class="sur">Brasserie · Pizzeria · Bar — depuis 2017</span>
+      <h1>
+        <span class="l"><span>Aujourd'hui,</span></span>
+        <span class="l"><span><em>on mange</em></span></span>
+        <span class="l"><span>bien.</span></span>
+      </h1>
+      <p class="big">L'ardoise change avec le marché, la terrasse ne change jamais. Pizzas au feu de bois, tartare préparé minute, frites maison — et le café dès 7h du matin.</p>
+      <div class="hero-cta">
+        <a class="btn btn-l" href="tel:+33492780153">📞 04 92 78 01 53</a>
+        <a class="btn btn-c" href="#carte">Lire l'ardoise</a>
+      </div>
+      <div class="hero-facts">
+        <div><b>7j/7</b><span>Ouvert tous les jours</span></div>
+        <div><b>16,50 €</b><span>L'ardoise du jour</span></div>
+        <div><b>1 412</b><span>Avis Google</span></div>
+      </div>
+    </div>
+    <div class="polas">
+      <div class="pola a"><div class="inner"><img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=80" alt="Pizza au feu de bois" /></div><span class="cap">la pizza</span></div>
+      <div class="pola b"><div class="inner"><img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=800&q=80" alt="Pièce de bœuf et frites maison" /></div><span class="cap">frites maison</span></div>
+      <div class="pola c"><div class="inner"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80" alt="La terrasse" /></div><span class="cap">la terrasse</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="jour" aria-hidden="true">
+  <div class="jour-in">
+    <span>Ardoise du jour 16,50 €</span><span>Tartare préparé minute</span><span>Pizzas dès 10 €</span><span>Terrasse sous l'olivier</span><span>Café dès 7h</span>
+    <span>Ardoise du jour 16,50 €</span><span>Tartare préparé minute</span><span>Pizzas dès 10 €</span><span>Terrasse sous l'olivier</span><span>Café dès 7h</span>
+  </div>
+</div>
+
+<!-- ============ LA MAISON ============ -->
+<section class="sec" id="maison" aria-labelledby="maison-t">
+  <div class="wrap maison">
+    <div class="cadre rv">
+      <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1100&q=80" alt="Salle de la brasserie, un midi" loading="lazy" />
+    </div>
+    <div>
+      <span class="sur rv">La maison</span>
+      <h2 id="maison-t" class="rv" style="margin:14px 0 16px">Une <span class="souligne">adresse</span><br>de village</h2>
+      <p class="big rv">Au rond-point du Grysélis, la brasserie accueille curistes, familles et habitués depuis 2017. C'est l'une des rares tables de Gréoux ouvertes tous les jours — et sans doute la plus animée.</p>
+      <div class="notes">
+        <div class="note rv"><span class="b">1</span><p><b>On ne ferme pas entre les services.</b> Café du matin, déjeuner, apéro sur la terrasse, dîner : de 7h à 1h, tous les jours.</p></div>
+        <div class="note rv"><span class="b">2</span><p><b>La terrasse à l'ombre de l'olivier.</b> La meilleure place du village quand il fait beau ; salle climatisée quand le mistral se lève.</p></div>
+        <div class="note rv"><span class="b">3</span><p><b>Des prix de brasserie.</b> Ardoise du jour à 16,50 €, pizzas dès 10 €, 20 à 30 € à la carte. Généreux, sans mauvaise surprise.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ L'ARDOISE ============ -->
+<section class="sec fonce" id="carte" aria-labelledby="carte-t">
+  <div class="wrap">
+    <div class="sec-head c rv">
+      <span class="sur">L'ardoise</span>
+      <h2 id="carte-t">Ce qu'on <span class="souligne">sert</span> ici</h2>
+      <p class="big">Cuisine française aux accents provençaux, touche italienne assumée. Portions généreuses, prix raisonnables.</p>
+    </div>
+
+    <div class="tableau rv">
+      <div class="tableau-head">
+        <div class="t">La Brasserie du Soleil</div>
+        <div class="s">Rond-point du Grysélis · Gréoux-les-Bains</div>
+      </div>
+
+      <div class="cols">
+        <div>
+          <div class="grp">
+            <h3>Les pizzas</h3>
+            <div class="hint">Ø 40 cm · au feu de bois</div>
+            <div class="li"><span class="n">Fromage ou Anchois</span><span class="f"></span><span class="p">10 €</span></div>
+            <div class="li"><span class="n">Royale</span><span class="f"></span><span class="p">11 €</span></div>
+            <div class="li"><span class="n">Arménienne</span><span class="f"></span><span class="p">11 €</span></div>
+            <div class="li"><span class="n">Parmesana</span><span class="f"></span><span class="p">12 €</span></div>
+            <div class="li"><span class="n">Corse</span><span class="f"></span><span class="p">14 €</span></div>
+            <div class="li"><span class="n">Mexicaine <small>la plus demandée</small></span><span class="f"></span><span class="p soft">signature</span></div>
+            <div class="li"><span class="n">Quiche 3 fromages</span><span class="f"></span><span class="p">10 €</span></div>
+          </div>
+
+          <div class="grp">
+            <h3>Pâtes & salades</h3>
+            <div class="hint">Le côté italien</div>
+            <div class="li"><span class="n">Bolognaise · Carbonara · Pennes</span><span class="f"></span><span class="p soft">à la carte</span></div>
+            <div class="li"><span class="n">Lasagnes maison</span><span class="f"></span><span class="p soft">à la carte</span></div>
+            <div class="li"><span class="n">Salade périgourdine</span><span class="f"></span><span class="p soft">à la carte</span></div>
+            <div class="li"><span class="n">Tomate & mozzarella</span><span class="f"></span><span class="p soft">à la carte</span></div>
+            <div class="li"><span class="n">Burrata crémeuse</span><span class="f"></span><span class="p soft">à la carte</span></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="grp">
+            <h3>Les incontournables</h3>
+            <div class="hint">Viandes & poissons</div>
+            <div class="li"><span class="n">Steak tartare <small>préparé minute</small></span><span class="f"></span><span class="p soft">la spécialité</span></div>
+            <div class="li"><span class="n">Pièce de bœuf & frites maison</span><span class="f"></span><span class="p soft">à la carte</span></div>
+            <div class="li"><span class="n">Entrecôte grillée</span><span class="f"></span><span class="p soft">à la carte</span></div>
+            <div class="li"><span class="n">Magret de canard caramélisé</span><span class="f"></span><span class="p soft">à la carte</span></div>
+            <div class="li"><span class="n">Escalope milanaise</span><span class="f"></span><span class="p soft">à la carte</span></div>
+            <div class="li"><span class="n">Filet de saumon</span><span class="f"></span><span class="p soft">à la carte</span></div>
+            <div class="li"><span class="n">Ardoise du jour <small>entrée + plat + dessert</small></span><span class="f"></span><span class="p">16,50 €</span></div>
+          </div>
+
+          <div class="grp">
+            <h3>Apéro, bar & desserts</h3>
+            <div class="hint">À partager, puis la note sucrée</div>
+            <div class="li"><span class="n">Planches charcuterie & fromages</span><span class="f"></span><span class="p soft">à partager</span></div>
+            <div class="li"><span class="n">Cocktails maison</span><span class="f"></span><span class="p soft">carte du bar</span></div>
+            <div class="li"><span class="n">Bières pression & vins au verre</span><span class="f"></span><span class="p soft">carte du bar</span></div>
+            <div class="li"><span class="n">Tiramisu · Crème brûlée</span><span class="f"></span><span class="p soft">maison</span></div>
+            <div class="li"><span class="n">Tarte au citron · Fondant chocolat</span><span class="f"></span><span class="p soft">maison</span></div>
+            <div class="li"><span class="n">Glaces & sorbets</span><span class="f"></span><span class="p soft">au choix</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ARDOISE DU JOUR ============ -->
+<section class="deal" aria-labelledby="deal-t">
+  <div class="wrap">
+    <span class="sur rv" style="justify-content:center">Tous les midis</span>
+    <div class="prix rv">16,50 €</div>
+    <h2 id="deal-t" class="rv">Entrée · Plat · Dessert</h2>
+    <p class="rv">« Menu du jour entrée-plat-dessert, ça devient rare » — c'est ce que nos clients écrivent. Alors on le garde.</p>
+    <a class="btn btn-l rv" href="tel:+33492780153">Réserver une table</a>
+  </div>
+</section>
+
+<!-- ============ AVIS ============ -->
+<section class="sec" id="avis" aria-labelledby="avis-t">
+  <div class="wrap">
+    <div class="sec-head c rv">
+      <span class="sur" style="justify-content:center">Ils y étaient</span>
+      <h2 id="avis-t">Épinglés au <span class="souligne">comptoir</span></h2>
+      <p class="big">Plus de 1 400 avis Google et 350 avis Tripadvisor. En voici quelques-uns.</p>
+    </div>
+    <div class="avis">
+      <article class="papier rv"><div class="st">★★★★★</div><p>« Accueil au top, souriante et à l'écoute. La viande comme je l'aime, frites maison et légumes : parfait ! »</p><div class="who"><div><b>Sandrine M.</b><span>Juillet 2026 · Tripadvisor</span></div></div></article>
+      <article class="papier rv"><div class="st">★★★★★</div><p>« Patron au top, cuisine excellente pour un prix abordable. Un lieu incontournable pour passer un excellent moment. »</p><div class="who"><div><b>Philippe C.</b><span>Sainte-Croix-du-Verdon</span></div></div></article>
+      <article class="papier rv"><div class="st">★★★★★</div><p>« Déjeuner en terrasse sous un olivier, super ! Très bon accueil, menu du jour entrée-plat-dessert : ça devient rare. »</p><div class="who"><div><b>Gaspard P.</b><span>Nancy · Tripadvisor</span></div></div></article>
+      <article class="papier rv"><div class="st">★★★★★</div><p>« Brasserie sympa, toujours beaucoup de monde. Bons petits plats, bon rapport qualité-prix. Continuez ainsi ! »</p><div class="who"><div><b>Sylvie R.</b><span>Sarrebourg · Mai 2026</span></div></div></article>
+      <article class="papier rv"><div class="st">★★★★★</div><p>« Superbe découverte, la pièce de bœuf est juste incroyable. Les enfants ont adoré les pâtes bolognaise. »</p><div class="who"><div><b>Charlotte A.</b><span>En famille · Tripadvisor</span></div></div></article>
+      <article class="papier rv"><div class="st">★★★★★</div><p>« Énorme pizza qui prend toute l'assiette, avec une très bonne odeur qui s'en dégage. Personnel très sympathique. »</p><div class="who"><div><b>Éliane B.</b><span>Juin 2026 · Google</span></div></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INFOS ============ -->
+<section class="sec fonce" id="infos" aria-labelledby="infos-t">
+  <div class="wrap">
+    <div class="sec-head c rv">
+      <span class="sur" style="justify-content:center">Infos pratiques</span>
+      <h2 id="infos-t">Rond-point du <span class="souligne">Grysélis</span></h2>
+      <p class="big">À deux pas des thermes et du centre-ville, avec un parking gratuit à 95 m.</p>
+    </div>
+    <div class="infos">
+      <div class="panneau rv">
+        <div class="row"><span class="ic" aria-hidden="true">📍</span><div><b>Adresse</b><p>Rond-point du Grysélis<br>04800 Gréoux-les-Bains</p></div></div>
+        <div class="row"><span class="ic" aria-hidden="true">📞</span><div><b>Réservation</b><a href="tel:+33492780153">04 92 78 01 53</a></div></div>
+        <div class="row"><span class="ic" aria-hidden="true">🕐</span><div><b>Horaires</b><p>Tous les jours · 7h00 – 1h00<br>Service midi &amp; soir</p></div></div>
+        <div class="row"><span class="ic" aria-hidden="true">🚗</span><div><b>Parking</b><p>Gratuit, Av. des Marronniers (95 m)</p></div></div>
+        <div class="tags">
+          <span class="tag">Terrasse</span><span class="tag">Climatisé</span><span class="tag">Accessible PMR</span>
+          <span class="tag">Chaises hautes</span><span class="tag">Groupes</span><span class="tag">Cocktails</span>
+          <span class="tag">Sport à la TV</span><span class="tag">CB & espèces</span>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:26px">
+          <a class="btn btn-l" href="tel:+33492780153">Appeler</a>
+          <a class="btn btn-c" href="https://www.google.com/maps/search/?api=1&query=Brasserie+du+Soleil+Rond-point+du+Gryselis+04800+Greoux-les-Bains" target="_blank" rel="noopener">Itinéraire</a>
+        </div>
+      </div>
+      <div class="map rv">
+        <iframe title="Carte — La Brasserie du Soleil, Gréoux-les-Bains" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=5.878%2C43.752%2C5.895%2C43.762&layer=mapnik&marker=43.7573%2C5.8866"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <a class="brand" href="#top" style="margin-bottom:12px"><span class="mark">☀</span><b>La Brasserie du Soleil<span>Gréoux-les-Bains</span></b></a>
+        <p style="max-width:34ch">Brasserie, pizzeria et bar au rond-point du Grysélis. Ouvert tous les jours de 7h à 1h.</p>
+      </div>
+      <div><h4>Le restaurant</h4><ul>
+        <li><a href="#maison">La maison</a></li><li><a href="#carte">L'ardoise</a></li>
+        <li><a href="#avis">Avis clients</a></li><li><a href="#infos">Infos pratiques</a></li></ul></div>
+      <div><h4>Contact</h4><ul>
+        <li><a href="tel:+33492780153">04 92 78 01 53</a></li>
+        <li>Rond-point du Grysélis<br>04800 Gréoux-les-Bains</li>
+        <li>Tous les jours · 7h – 1h</li></ul></div>
+    </div>
+    <div class="f-bot">
+      <span>© 2026 La Brasserie du Soleil — Maquette de présentation</span>
+      <span>Direction artistique « Ardoise » · Photos de démonstration</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var drawer = document.getElementById('drawer');
+  document.getElementById('burger').onclick = function(){ drawer.classList.add('open'); };
+  document.getElementById('close').onclick  = function(){ drawer.classList.remove('open'); };
+  drawer.querySelectorAll('a').forEach(function(a){ a.onclick = function(){ drawer.classList.remove('open'); }; });
+
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var t = document.querySelector(a.getAttribute('href'));
+      if (!t) return;
+      e.preventDefault();
+      t.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+    });
+  });
+
+  var lines = document.querySelectorAll('.hero h1 .l>span');
+  if (!reduce) {
+    lines.forEach(function(el, i){
+      el.style.transform = 'translateY(105%)';
+      el.style.transition = 'transform .85s cubic-bezier(.16,1,.3,1) ' + (i * 0.1 + 0.06) + 's';
+    });
+    requestAnimationFrame(function(){
+      requestAnimationFrame(function(){ lines.forEach(function(el){ el.style.transform = 'translateY(0)'; }); });
+    });
+    setTimeout(function(){ lines.forEach(function(el){ el.style.transform = 'translateY(0)'; }); }, 1300);
+  }
+
+  var rv = document.querySelectorAll('.rv');
+  var show = function(el){
+    el.style.transition = 'opacity .75s cubic-bezier(.16,1,.3,1), transform .75s cubic-bezier(.16,1,.3,1)';
+    el.style.opacity = 1; el.style.transform = 'none';
+  };
+  if (reduce || !window.IntersectionObserver) {
+    rv.forEach(show);
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting) { show(e.target); io.unobserve(e.target); } });
+    }, { threshold: .15 });
+    rv.forEach(function(el){ io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>
