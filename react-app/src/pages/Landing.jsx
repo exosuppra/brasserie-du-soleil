@@ -154,7 +154,7 @@ export default function Landing() {
         <p className="mx-auto max-w-[70ch] py-12 text-center text-[.82rem] font-light text-sourdine">
           Données réelles : {RESTO.addressShort}, {RESTO.phone}, ouvert {RESTO.hours.toLowerCase()},
           prix des pizzas relevés sur la carte, menu du jour à {RESTO.menuDuJour} et extraits d'avis publiés.
-          Photos de démonstration (Unsplash) — couleurs, textes et visuels entièrement personnalisables.
+          Photos : clichés clients (Tripadvisor), à remplacer par les vôtres — couleurs, textes et visuels entièrement personnalisables.
         </p>
       </main>
 
