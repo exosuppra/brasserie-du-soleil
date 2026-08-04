@@ -62,7 +62,15 @@ Les contenus proviennent de sources publiques (fiche Google, Tripadvisor, site d
 
 ## Photos
 
-Toutes les photos sont des **images de démonstration** issues d'Unsplash, à remplacer par les photos du restaurant. Les références sont centralisées dans [`react-app/src/data.js`](react-app/src/data.js) (objet `PHOTOS`) et en clair dans chaque maquette HTML.
+Les photos affichées (dossier [`photos/`](photos/)) sont de **vrais clichés de la Brasserie du Soleil**, récupérés depuis les avis publiés sur **Tripadvisor** : la terrasse sous l'olivier, les pizzas, la salade périgourdine, le carpaccio-burrata, la salle et un dessert. Elles servent de repère visuel réaliste en attendant les photos officielles du restaurant.
+
+> ⚠ **Droits à régler avant mise en ligne définitive.** La fiche Tripadvisor n'est pas revendiquée par le restaurant : ces photos ont été prises par des clients, qui en conservent les droits d'auteur. À remplacer idéalement par les propres photos du restaurant (ou avec l'accord des auteurs) avant une exploitation commerciale.
+
+Les références sont centralisées dans [`react-app/src/data.js`](react-app/src/data.js) (objet `PHOTOS`, importées en statique) et en `../photos/…` dans chaque maquette HTML.
+
+## Crédit
+
+Sites développés par **Logiq IA** — [logiq-ia.fr](https://logiq-ia.fr). Le crédit figure dans le pied de page de chaque maquette et de l'application.
 
 ---
 

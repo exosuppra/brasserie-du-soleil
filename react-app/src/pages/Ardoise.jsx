@@ -17,7 +17,7 @@ const NAV = [
 
 const POLAS = [
   { img: PHOTOS.pizza, cap: 'la pizza', cls: 'left-0 top-0 h-[56%] w-1/2 -rotate-[5deg] max-[620px]:h-[64%] max-[620px]:w-[64%]' },
-  { img: PHOTOS.boeuf, cap: 'frites maison', cls: 'right-0 top-[9%] h-1/2 w-[44%] rotate-[4.5deg] max-[620px]:hidden' },
+  { img: PHOTOS.apero, cap: "l'apéro", cls: 'right-0 top-[9%] h-1/2 w-[44%] rotate-[4.5deg] max-[620px]:hidden' },
   { img: PHOTOS.terrasse, cap: 'la terrasse', cls: 'bottom-0 left-[17%] z-[3] h-[43%] w-[43%] -rotate-[1.5deg] max-[620px]:left-[38%] max-[620px]:h-[52%] max-[620px]:w-[58%]' },
 ]
 
@@ -320,7 +320,7 @@ export default function Ardoise() {
 
       <footer className="border-t border-dashed border-craie/20 bg-ardoise2 py-11 text-[13px] text-craie/50">
         <div className="mx-auto flex max-w-[1180px] flex-wrap justify-between gap-4 px-5">
-          <span>© 2026 {RESTO.name} — Maquette « Ardoise »</span>
+          <span>© 2026 {RESTO.name} — Développé par <a href="https://logiq-ia.fr" target="_blank" rel="noopener" className="font-medium text-laiton no-underline">Logiq IA</a></span>
           <Link to="/" className="no-underline transition-colors hover:text-laiton">← Revenir aux 3 maquettes</Link>
         </div>
       </footer>

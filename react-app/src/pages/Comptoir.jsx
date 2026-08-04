@@ -75,7 +75,7 @@ export default function Comptoir() {
       {/* la une */}
       <header ref={uneRef} id="top" className="relative flex min-h-[calc(100svh-108px)] items-end overflow-hidden">
         <motion.div style={{ y: bgY }} className="absolute inset-0 z-0 h-[114%]" aria-hidden="true">
-          <img src={PHOTOS.salle} alt="" className="h-full w-full object-cover" />
+          <img src={PHOTOS.terrasse} alt="" className="h-full w-full object-cover" />
           <span className="absolute inset-0" style={{ background: 'linear-gradient(180deg,rgba(27,31,23,.42) 0%,rgba(27,31,23,.18) 34%,rgba(27,31,23,.86) 100%)' }} />
         </motion.div>
 
@@ -140,9 +140,9 @@ export default function Comptoir() {
       <section id="maison" className="py-16 md:py-28">
         <div className="mx-auto grid max-w-[1280px] items-start gap-10 px-6 lg:grid-cols-[5fr_7fr] lg:gap-14">
           <SectionReveal as="figure" className="m-0">
-            <img src={PHOTOS.terrasse} alt="La terrasse de la brasserie" loading="lazy" className="aspect-[4/5] w-full object-cover" />
+            <img src={PHOTOS.salle} alt="La salle de la brasserie" loading="lazy" className="aspect-[4/5] w-full object-cover" />
             <figcaption className="mt-3 border-l-2 border-brique pl-3.5 text-xs text-sourdine">
-              La terrasse, à l'ombre de l'olivier — la meilleure place du village quand il fait beau.
+              La salle, climatisée et accessible de plain-pied — et la terrasse dès les beaux jours.
             </figcaption>
           </SectionReveal>
 
@@ -239,7 +239,7 @@ export default function Comptoir() {
       {/* menu du jour */}
       <section className="relative grid min-h-[min(76svh,620px)] place-items-center overflow-hidden text-center text-creme">
         <div className="absolute inset-0 z-0" aria-hidden="true">
-          <img src={PHOTOS.vin} alt="" loading="lazy" className="h-full w-full object-cover" />
+          <img src={PHOTOS.apero} alt="" loading="lazy" className="h-full w-full object-cover" />
           <span className="absolute inset-0 bg-[rgba(27,31,23,.66)]" />
         </div>
         <SectionReveal className="relative z-10 max-w-[840px] px-6 py-16">
@@ -338,7 +338,7 @@ export default function Comptoir() {
 
       <footer className="bg-olive py-12 text-sm font-light text-creme/65">
         <div className="mx-auto flex max-w-[1280px] flex-wrap justify-between gap-4 px-6">
-          <span>© 2026 {RESTO.name} — Maquette « Comptoir »</span>
+          <span>© 2026 {RESTO.name} — Développé par <a href="https://logiq-ia.fr" target="_blank" rel="noopener" className="font-medium text-briquec no-underline transition-colors hover:text-creme">Logiq IA</a></span>
           <Link to="/" className="no-underline transition-colors hover:text-creme">← Revenir aux 3 maquettes</Link>
         </div>
       </footer>

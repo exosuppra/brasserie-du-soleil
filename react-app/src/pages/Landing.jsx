@@ -161,7 +161,7 @@ export default function Landing() {
       <footer className="bg-olive py-9 text-[.8rem] font-light text-creme/60">
         <div className="mx-auto flex max-w-[1300px] flex-wrap justify-between gap-4 px-6">
           <span>© 2026 <b className="font-medium text-creme">{RESTO.name}</b> — {RESTO.city}</span>
-          <span>Maquettes de présentation</span>
+          <span>Développé par <a href="https://logiq-ia.fr" target="_blank" rel="noopener" className="font-medium text-briquec transition-colors hover:text-creme">Logiq IA</a></span>
         </div>
       </footer>
     </div>

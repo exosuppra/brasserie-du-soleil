@@ -311,7 +311,7 @@ export default function Affiche() {
       <footer className="bg-noir py-12 text-papier">
         <div className="mx-auto max-w-[1240px] px-5">
           <div className="flex flex-wrap items-center justify-between gap-4 border-t-[3px] border-papier/20 pt-5 text-[12px] font-semibold uppercase tracking-[.1em] text-papier/55">
-            <span>© 2026 {RESTO.name} — Maquette « Affiche »</span>
+            <span>© 2026 {RESTO.name} — Développé par <a href="https://logiq-ia.fr" target="_blank" rel="noopener" className="text-jaune no-underline">Logiq IA</a></span>
             <Link to="/" className="no-underline transition-colors hover:text-jaune">← Revenir aux 3 maquettes</Link>
           </div>
         </div>
