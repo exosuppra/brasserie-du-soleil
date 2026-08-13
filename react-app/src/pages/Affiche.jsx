@@ -19,7 +19,7 @@ const NAV = [
 const BLOCS = [
   { n: '01', t: 'Ouvert tous les jours', d: "L'une des rares adresses de Gréoux ouvertes 7j/7, de 7h du matin à 1h. Café, déjeuner, apéro, dîner : on ne ferme pas entre les services.", bg: 'bg-jaune text-noir' },
   { n: '02', t: 'La terrasse', d: "À l'ombre de l'olivier, la meilleure place du village pour un déjeuner qui traîne. Salle climatisée quand le mistral se lève.", bg: 'bg-papier text-noir' },
-  { n: '03', t: 'Prix de brasserie', d: 'Menu du jour à 16,50 € entrée-plat-dessert, pizzas dès 10 €, compter 20 à 30 € à la carte. Généreux, sans mauvaise surprise.', bg: 'bg-rouge text-papier' },
+  { n: '03', t: 'Prix de brasserie', d: 'Pizzas au feu de bois dès 11,50 €, pâtes à 16,50 €, viandes de 18,50 à 23,50 €. Prix TTC, service compris. Généreux, sans mauvaise surprise.', bg: 'bg-rouge text-papier' },
 ]
 
 const btn = 'inline-flex items-center gap-2 border-4 border-noir px-6 py-3.5 text-[15px] font-extrabold uppercase tracking-[.06em] no-underline transition-[transform,box-shadow] duration-100'
@@ -100,7 +100,7 @@ export default function Affiche() {
             <div className="mt-10 flex flex-wrap border-[3px] border-papier">
               {[
                 { b: '7j/7', s: 'Ouvert tous les jours' },
-                { b: '16,50 €', s: 'Menu du jour' },
+                { b: '11,50 €', s: 'Pizzas dès' },
                 { b: '1 412', s: 'Avis Google' },
               ].map((f) => (
                 <div key={f.b} className="flex-1 basis-1/3 border-r-[3px] border-papier px-4 py-3.5 last:border-r-0 max-[560px]:basis-full max-[560px]:border-b-[3px] max-[560px]:border-r-0 max-[560px]:last:border-b-0">
@@ -135,7 +135,7 @@ export default function Affiche() {
         className="border-b-4 border-noir bg-jaune py-3"
         itemClassName="font-anton text-[23px] uppercase"
         separator="●"
-        items={['Pizzas au feu de bois', "Terrasse sous l'olivier", 'Tartare minute', 'Frites maison', 'Cocktails', 'Menu 16,50 €']}
+        items={['Pizzas au feu de bois', "Terrasse sous l'olivier", 'Tartare de bœuf', 'Entrecôtes grillées', 'Cocktails', 'Pizzas dès 11,50 €']}
       />
 
       {/* la maison */}
@@ -209,16 +209,16 @@ export default function Affiche() {
         </div>
       </section>
 
-      {/* menu du jour */}
+      {/* la pizza signature */}
       <section className="border-y-4 border-noir bg-rouge py-14 text-center text-papier md:py-20">
         <SectionReveal className="mx-auto max-w-[1240px] px-5">
-          <span className="inline-block bg-jaune px-3.5 py-1.5 text-[12px] font-extrabold uppercase tracking-[.2em] text-noir">Tous les midis</span>
-          <div className="my-2 font-anton text-[clamp(5.5rem,20vw,15.5rem)] leading-[.82] tracking-[-.02em] text-jaune">
-            <NumberTicker value={16.5} decimals={2} suffix=" €" />
+          <span className="inline-block bg-jaune px-3.5 py-1.5 text-[12px] font-extrabold uppercase tracking-[.2em] text-noir">La spécialité</span>
+          <div className="my-2 font-anton text-[clamp(4rem,15vw,12rem)] leading-[.82] tracking-[-.02em] text-jaune">
+            Pizzas dès <NumberTicker value={11.5} decimals={2} suffix=" €" />
           </div>
-          <h2 className="mb-3.5 font-anton text-[clamp(1.5rem,3.4vw,2.75rem)] uppercase">Entrée · Plat · Dessert</h2>
+          <h2 className="mb-3.5 font-anton text-[clamp(1.5rem,3.4vw,2.75rem)] uppercase">Au feu de bois</h2>
           <p className="mx-auto mb-7 max-w-[46ch] font-medium text-papier/90">
-            « Menu du jour entrée-plat-dessert, ça devient rare » — c'est ce que nos clients écrivent. Alors on le garde.
+            « Énorme pizza qui prend toute l'assiette, avec une très bonne odeur qui s'en dégage » — nos clients le disent bien mieux que nous.
           </p>
           <a href={RESTO.phoneHref} className={`${btn} ${shadow} bg-jaune text-noir`}>Réserver une table</a>
         </SectionReveal>

@@ -15,20 +15,12 @@ import apero from '../../photos/apero.jpg'
 import dessert from '../../photos/dessert.jpg'
 
 export const PHOTOS = {
-  terrasse,      // la terrasse sous l'olivier, en soirée
-  pizza,         // pizza chorizo (portrait)
-  pizzaLarge,    // pizza chèvre-chorizo (paysage)
-  salade,        // salade périgourdine
-  saladeChevre,  // salade au chèvre chaud
-  carpaccio,     // carpaccio de bœuf & burrata
-  salle,         // la salle
-  interieur,     // banquettes
-  apero,         // table d'apéro : pizza & cocktails
-  dessert,       // crème brûlée & café gourmand
+  terrasse, pizza, pizzaLarge, salade, saladeChevre, carpaccio, salle, interieur, apero, dessert,
 }
 
-// Données réelles du restaurant
-// Sources : fiche Google, Tripadvisor, Mairie de Gréoux-les-Bains, lacarte.menu
+// Données réelles du restaurant.
+// Carte et prix : relevés sur l'ardoise du restaurant (photo fournie par le client).
+// Coordonnées : fiche Google, Mairie de Gréoux-les-Bains. Avis : Google / Tripadvisor.
 export const RESTO = {
   name: 'La Brasserie du Soleil',
   tagline: 'Brasserie · Pizzeria · Bar',
@@ -42,75 +34,70 @@ export const RESTO = {
   rating: '3,9',
   reviews: 1412,
   budget: '20 – 30 € par personne',
-  menuDuJour: '16,50 €',
+  pizzaFrom: '11,50 €',      // prix de la pizza la moins chère (Margarita)
   parking: 'Parking gratuit Av. des Marronniers, à 95 m',
+  paiement: 'Prix TTC, service compris · CB acceptée dès 10 €',
   maps: 'https://www.google.com/maps/search/?api=1&query=Brasserie+du+Soleil+Rond-point+du+Gryselis+04800+Greoux-les-Bains',
 }
 
-// Prix vérifiés : pizzas et quiche. Le reste est à la carte (prix à confirmer).
+// Carte complète, relevée sur l'ardoise du restaurant.
 export const CARTE = [
   {
-    key: 'pizzas',
-    title: 'Les pizzas',
-    sub: 'Ø 40 cm · au feu de bois',
-    photo: pizzaLarge,
-    desc: 'Pâte fine, garnitures généreuses. En grand format à partager ou en petite taille.',
-    items: [
-      { n: 'Fromage ou Anchois', p: '10 €' },
-      { n: 'Royale', p: '11 €' },
-      { n: 'Arménienne', p: '11 €' },
-      { n: 'Parmesana', p: '12 €' },
-      { n: 'Corse', p: '14 €' },
-      { n: 'Mexicaine', sub: 'la plus demandée', p: 'signature', soft: true },
-      { n: 'Quiche 3 fromages', p: '10 €' },
-    ],
-  },
-  {
-    key: 'plats',
-    title: 'Les incontournables',
-    sub: 'Viandes & poissons',
-    photo: carpaccio,
-    desc: 'La viande, la vraie — et des frites maison qui reviennent dans tous les avis.',
-    items: [
-      { n: 'Steak tartare', sub: 'préparé minute', p: 'la spécialité', soft: true },
-      { n: 'Carpaccio de bœuf & burrata', p: 'à la carte', soft: true },
-      { n: 'Pièce de bœuf & frites maison', p: 'à la carte', soft: true },
-      { n: 'Entrecôte grillée', p: 'à la carte', soft: true },
-      { n: 'Magret de canard caramélisé', p: 'à la carte', soft: true },
-      { n: 'Escalope milanaise', p: 'à la carte', soft: true },
-      { n: 'Menu du jour', sub: 'entrée + plat + dessert', p: '16,50 €' },
-    ],
-  },
-  {
-    key: 'pates',
-    title: 'Pâtes & salades',
-    sub: 'Le côté italien',
+    key: 'salades',
+    title: 'Salades & entrées',
+    sub: 'Fraîcheur & générosité',
     photo: salade,
-    desc: 'Le côté italien de la maison, et des salades généreuses pour les midis d’été.',
+    desc: 'Des salades composées généreuses et de belles entrées à partager.',
     items: [
-      { n: 'Salade périgourdine', p: 'à la carte', soft: true },
-      { n: 'Salade au chèvre chaud', p: 'à la carte', soft: true },
-      { n: 'Spaghettis bolognaise', p: 'à la carte', soft: true },
-      { n: 'Spaghettis carbonara', p: 'à la carte', soft: true },
-      { n: 'Lasagnes maison', p: 'à la carte', soft: true },
-      { n: 'Tomate & mozzarella', p: 'à la carte', soft: true },
-      { n: 'Burrata crémeuse', p: 'à la carte', soft: true },
+      { n: 'Salade César', sub: 'tomate, maïs, œuf, parmesan, croûtons, poulet', p: '17 €' },
+      { n: 'Salade de chèvre pané', sub: 'tomate, maïs, œuf, jambon cru, chèvre pané', p: '17 €' },
+      { n: 'Terrine de foie gras maison', p: '20 €' },
+      { n: 'Tomate & burrata', p: '17 €' },
+      { n: 'Carpaccio de bœuf', p: '15 €' },
     ],
   },
   {
-    key: 'bar',
-    title: 'Apéro, bar & desserts',
-    sub: 'À partager, puis la note sucrée',
-    photo: dessert,
-    desc: "L'heure de l'apéro en terrasse, et de quoi finir en douceur.",
+    key: 'viandes',
+    title: 'Viandes & pâtes',
+    sub: 'La cuisine de brasserie',
+    photo: carpaccio,
+    desc: 'Viandes grillées et pâtes maison — le cœur de la carte.',
     items: [
-      { n: 'Planche de charcuterie', p: 'à partager', soft: true },
-      { n: 'Planche de fromages', p: 'à partager', soft: true },
-      { n: 'Cocktails maison', p: 'carte du bar', soft: true },
-      { n: 'Bières pression & vins au verre', p: 'carte du bar', soft: true },
-      { n: 'Crème brûlée · Tiramisu', p: 'maison', soft: true },
-      { n: 'Tarte au citron · Fondant chocolat', p: 'maison', soft: true },
-      { n: 'Café gourmand · Glaces & sorbets', p: 'au choix', soft: true },
+      { n: 'Tartare de bœuf', p: '19,50 €' },
+      { n: 'Escalope à la milanaise', p: '20 €' },
+      { n: "Entrecôte maître d'hôtel", p: '21,50 €' },
+      { n: 'Entrecôte roquefort', p: '23,50 €' },
+      { n: 'Foie de veau persillé', p: '18,50 €' },
+      { n: 'Magret de canard, sauce miel', p: '22 €' },
+      { n: 'Hamburger de bœuf ou de poulet', p: '18,50 €' },
+      { n: 'Pâtes bolognaise · carbonara · roquefort', p: '16,50 €' },
+    ],
+  },
+  {
+    key: 'pizzas',
+    title: 'Pizzas — base tomate',
+    sub: 'Au feu de bois',
+    photo: pizzaLarge,
+    desc: 'La signature de la maison : pâte fine et garnitures généreuses.',
+    items: [
+      { n: 'Margarita', sub: 'emmental râpé, olives, origan', p: '11,50 €' },
+      { n: 'Napolitaine', sub: 'anchois, olives, origan', p: '12,50 €' },
+      { n: '4 fromages', sub: 'emmental, chèvre, roquefort, mozzarella', p: '13,50 €' },
+      { n: 'Royale', sub: 'emmental, jambon, champignons, olives, origan', p: '13,50 €' },
+      { n: 'Chorizo', sub: 'emmental, chorizo, olives, origan', p: '14 €' },
+    ],
+  },
+  {
+    key: 'pizzas-creme',
+    title: 'Pizzas — base crème',
+    sub: 'Au feu de bois',
+    photo: pizza,
+    desc: 'Les gourmandes, sur une base crème fraîche.',
+    items: [
+      { n: 'Paysanne', sub: 'emmental, lardons, champignons, origan', p: '13,50 €' },
+      { n: 'Campagnarde', sub: 'emmental, chèvre, roquefort, mozzarella, olives, origan', p: '15 €' },
+      { n: 'Chausson Reine', sub: 'emmental, jambon, champignons, œuf, olives, origan', p: '15 €' },
+      { n: 'Glaces & desserts maison', sub: 'demandez l’ardoise du jour', p: 'au choix', soft: true },
     ],
   },
 ]
@@ -123,7 +110,7 @@ export const SERVICES = [
   'Groupes bienvenus',
   'Cocktails',
   'Retransmissions sportives',
-  'CB & espèces',
+  'CB dès 10 € & espèces',
 ]
 
 // Extraits d'avis réellement publiés (Google / Tripadvisor)
@@ -141,7 +128,7 @@ export const AVIS = [
   {
     name: 'Gaspard P.',
     city: 'Nancy · Tripadvisor',
-    text: "Déjeuner en terrasse sous un olivier, super ! Très bon accueil, menu du jour entrée-plat-dessert : ça devient rare.",
+    text: "Déjeuner en terrasse sous un olivier, super ! Très bon accueil. Nous avons très bien mangé, bravo au cuisinier. Nous reviendrons.",
   },
   {
     name: 'Sylvie R.',

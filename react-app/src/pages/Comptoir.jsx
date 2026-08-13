@@ -110,7 +110,7 @@ export default function Comptoir() {
             {[
               { b: '7j/7', s: 'Ouvert' },
               { b: '7h – 1h', s: 'Service continu' },
-              { b: '16,50 €', s: 'Menu du jour' },
+              { b: '11,50 €', s: 'Pizzas dès' },
               { b: '1 412', s: 'Avis Google' },
             ].map((f) => (
               <div key={f.s} className="flex-1 basis-1/4 border-r border-creme/30 px-5 pt-4 first:pl-0 last:border-r-0 max-[640px]:basis-1/2 max-[640px]:border-r-0 max-[640px]:pl-0">
@@ -243,13 +243,13 @@ export default function Comptoir() {
           <span className="absolute inset-0 bg-[rgba(27,31,23,.66)]" />
         </div>
         <SectionReveal className="relative z-10 max-w-[840px] px-6 py-16">
-          <p className="flex items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[.22em]">Tous les midis</p>
-          <div className="my-2.5 font-bricolage text-[clamp(4.5rem,15vw,11.9rem)] font-extrabold leading-[.86] tracking-[-.05em]">
-            <NumberTicker value={16.5} decimals={2} suffix=" €" />
+          <p className="flex items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[.22em]">La spécialité de la maison</p>
+          <div className="my-2.5 font-bricolage text-[clamp(3.4rem,12vw,9.5rem)] font-extrabold leading-[.86] tracking-[-.05em]">
+            Pizzas dès <NumberTicker value={11.5} decimals={2} suffix=" €" />
           </div>
-          <h2 className="mb-3.5 font-bricolage text-[clamp(1.4rem,3vw,2.4rem)] font-bold tracking-[-.03em]">Entrée · Plat · Dessert</h2>
+          <h2 className="mb-3.5 font-bricolage text-[clamp(1.4rem,3vw,2.4rem)] font-bold tracking-[-.03em]">Au feu de bois</h2>
           <p className="mx-auto mb-7 max-w-[46ch] text-base font-light text-creme/78">
-            « Menu du jour entrée-plat-dessert, ça devient rare » — c'est ce que nos clients écrivent. Alors on le garde.
+            « Énorme pizza qui prend toute l'assiette, avec une très bonne odeur qui s'en dégage » — c'est ce que nos clients écrivent.
           </p>
           <a href={RESTO.phoneHref} className={`${btn} border-creme bg-creme text-encre hover:border-brique hover:bg-brique hover:text-creme`}>
             <Phone size={15} /> Réserver une table
@@ -307,7 +307,7 @@ export default function Comptoir() {
                 { t: 'Téléphone', v: <a href={RESTO.phoneHref} className="no-underline transition-colors hover:text-brique">{RESTO.phone}</a> },
                 { t: 'Horaires', v: <>{RESTO.hours}<br />Service midi &amp; soir</> },
                 { t: 'Parking', v: RESTO.parking },
-                { t: 'Budget', v: <>{RESTO.budget} · menu du jour {RESTO.menuDuJour}</> },
+                { t: 'Budget', v: <>{RESTO.budget} · pizzas dès {RESTO.pizzaFrom}</> },
               ].map(({ t, v }) => (
                 <div key={t} className="grid grid-cols-[96px_1fr] items-start gap-4 border-b border-encre/[.16] py-4 last:border-b-0">
                   <b className="pt-1 text-[11px] font-semibold uppercase tracking-[.16em] text-brique">{t}</b>

@@ -7,7 +7,7 @@ import { introOK } from '../lib/intro'
 
 const FACTS = [
   { b: '7j/7', s: 'Ouvert · 7h – 1h' },
-  { b: '16,50 €', s: 'Menu du jour' },
+  { b: '11,50 €', s: 'Pizzas dès' },
   { b: '1 412', s: 'Avis Google' },
   { b: '100 %', s: 'Responsive' },
 ]
@@ -100,7 +100,7 @@ export default function Landing() {
             className="mt-6 max-w-[56ch] text-[clamp(1.05rem,1.9vw,1.3rem)] font-light text-olive"
           >
             Trois partis pris visuels pour le futur site de la brasserie, construits avec vos données réelles :
-            carte et prix, horaires 7j/7, menu du jour, avis publiés.
+            carte et prix relevés sur l'ardoise, horaires 7j/7, avis publiés.
           </motion.p>
 
           <div className="mt-11 grid grid-cols-2 border-t border-encre/[.16] md:grid-cols-4">
@@ -153,7 +153,7 @@ export default function Landing() {
 
         <p className="mx-auto max-w-[70ch] py-12 text-center text-[.82rem] font-light text-sourdine">
           Données réelles : {RESTO.addressShort}, {RESTO.phone}, ouvert {RESTO.hours.toLowerCase()},
-          prix des pizzas relevés sur la carte, menu du jour à {RESTO.menuDuJour} et extraits d'avis publiés.
+          carte et prix relevés sur l'ardoise (pizzas dès {RESTO.pizzaFrom}) et extraits d'avis publiés.
           Photos : clichés clients (Tripadvisor), à remplacer par les vôtres — couleurs, textes et visuels entièrement personnalisables.
         </p>
       </main>

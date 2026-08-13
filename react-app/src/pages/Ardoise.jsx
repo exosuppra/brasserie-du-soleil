@@ -24,7 +24,7 @@ const POLAS = [
 const NOTES = [
   { n: '1', t: 'On ne ferme pas entre les services.', d: "Café du matin, déjeuner, apéro sur la terrasse, dîner : de 7h à 1h, tous les jours." },
   { n: '2', t: "La terrasse à l'ombre de l'olivier.", d: 'La meilleure place du village quand il fait beau ; salle climatisée quand le mistral se lève.' },
-  { n: '3', t: 'Des prix de brasserie.', d: 'Ardoise du jour à 16,50 €, pizzas dès 10 €, 20 à 30 € à la carte. Généreux, sans mauvaise surprise.' },
+  { n: '3', t: 'Des prix de brasserie.', d: 'Pizzas au feu de bois dès 11,50 €, pâtes à 16,50 €, viandes de 18,50 à 23,50 €. Prix TTC, service compris.' },
 ]
 
 const btn = 'inline-flex items-center gap-2 border-2 px-6 py-3 font-barlow text-[14.5px] font-semibold no-underline transition-all duration-300 main-tracee'
@@ -111,7 +111,7 @@ export default function Ardoise() {
               <a href="#carte" data-anchor="#carte" className={`${btn} border-craie bg-transparent text-craie hover:-translate-y-0.5 hover:bg-craie/10`}>Lire l'ardoise</a>
             </motion.div>
             <div className="mt-8 flex flex-wrap gap-6 border-t border-dashed border-craie/20 pt-6">
-              {[{ b: '7j/7', s: 'Ouvert tous les jours' }, { b: '16,50 €', s: "L'ardoise du jour" }, { b: '1 412', s: 'Avis Google' }].map((f) => (
+              {[{ b: '7j/7', s: 'Ouvert tous les jours' }, { b: '11,50 €', s: 'Pizzas dès' }, { b: '1 412', s: 'Avis Google' }].map((f) => (
                 <div key={f.b}>
                   <b className="block font-caveat text-[36px] font-bold leading-[.9] text-laiton">{f.b}</b>
                   <span className="text-[11.5px] font-semibold uppercase tracking-[.14em] text-craie/50">{f.s}</span>
@@ -145,7 +145,7 @@ export default function Ardoise() {
         itemClassName="font-caveat text-[32px] font-bold text-craie/90"
         separator={<span className="text-laiton text-[17px]">✦</span>}
         duration="44s"
-        items={['Ardoise du jour 16,50 €', 'Tartare préparé minute', 'Pizzas dès 10 €', "Terrasse sous l'olivier", 'Café dès 7h']}
+        items={['Pizzas au feu de bois dès 11,50 €', 'Tartare de bœuf', 'Entrecôtes grillées', "Terrasse sous l'olivier", 'Café dès 7h']}
       />
 
       {/* la maison */}
@@ -221,12 +221,12 @@ export default function Ardoise() {
       <section className="border-y border-dashed border-craie/20 bg-ardoise2 py-16 text-center md:py-24">
         <SectionReveal className="mx-auto max-w-[1180px] px-5">
           <span className="inline-flex items-center justify-center gap-2.5 text-[11.5px] font-semibold uppercase tracking-[.26em] text-laiton">
-            <span className="h-px w-6 bg-laiton" />Tous les midis
+            <span className="h-px w-6 bg-laiton" />La spécialité de la maison
           </span>
-          <div className="font-caveat text-[clamp(6rem,19vw,14.5rem)] font-bold leading-[.8] text-laiton">16,50 €</div>
-          <h2 className="mb-3 mt-3.5 font-caveat text-[clamp(2.1rem,4.6vw,3.6rem)] font-bold">Entrée · Plat · Dessert</h2>
+          <div className="font-caveat text-[clamp(5rem,17vw,13rem)] font-bold leading-[.8] text-laiton">Pizzas dès 11,50 €</div>
+          <h2 className="mb-3 mt-3.5 font-caveat text-[clamp(2.1rem,4.6vw,3.6rem)] font-bold">Au feu de bois</h2>
           <p className="mx-auto mb-7 max-w-[46ch] text-craie/72">
-            « Menu du jour entrée-plat-dessert, ça devient rare » — c'est ce que nos clients écrivent. Alors on le garde.
+            « Énorme pizza qui prend toute l'assiette, avec une très bonne odeur qui s'en dégage » — c'est ce que nos clients écrivent.
           </p>
           <a href={RESTO.phoneHref} className={`${btn} border-laiton bg-laiton text-ardoise2 hover:-translate-y-0.5 hover:border-abricot hover:bg-abricot`}>Réserver une table</a>
         </SectionReveal>
