@@ -236,7 +236,7 @@ export default function Comptoir() {
         </div>
       </section>
 
-      {/* menu du jour */}
+      {/* la spécialité */}
       <section className="relative grid min-h-[min(76svh,620px)] place-items-center overflow-hidden text-center text-creme">
         <div className="absolute inset-0 z-0" aria-hidden="true">
           <img src={PHOTOS.apero} alt="" loading="lazy" className="h-full w-full object-cover" />
