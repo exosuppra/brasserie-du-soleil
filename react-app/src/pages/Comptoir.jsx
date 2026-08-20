@@ -59,7 +59,6 @@ export default function Comptoir() {
         <div className="mx-auto flex max-w-[1560px] items-center justify-between gap-5 px-6 py-4">
           <a href="#top" className="flex items-baseline gap-3 no-underline">
             <b className="font-bricolage text-xl font-extrabold leading-none tracking-[-.03em]">{RESTO.name}</b>
-            <span className="text-[10px] font-medium uppercase tracking-[.2em] text-sourdine">Est. 2017</span>
           </a>
           <ul className="hidden list-none gap-8 lg:flex">
             {NAV.map((n) => (
