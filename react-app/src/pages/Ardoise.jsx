@@ -24,7 +24,7 @@ const POLAS = [
 const NOTES = [
   { n: '1', t: 'On ne ferme pas entre les services.', d: "Café du matin, déjeuner, apéro sur la terrasse, dîner : de 7h à 1h, tous les jours." },
   { n: '2', t: "La terrasse à l'ombre de l'olivier.", d: 'La meilleure place du village quand il fait beau ; salle climatisée quand le mistral se lève.' },
-  { n: '3', t: 'Des prix de brasserie.', d: 'Pizzas au feu de bois dès 11,50 €, pâtes à 16,50 €, viandes de 18,50 à 23,50 €. Prix TTC, service compris.' },
+  { n: '3', t: 'Des prix de brasserie.', d: 'Pizzas maison dès 11,50 €, pâtes à 16,50 €, viandes de 18,50 à 23,50 €. Prix TTC, service compris.' },
 ]
 
 const btn = 'inline-flex items-center gap-2 border-2 px-6 py-3 font-barlow text-[14.5px] font-semibold no-underline transition-all duration-300 main-tracee'
@@ -97,7 +97,7 @@ export default function Ardoise() {
               transition={{ duration: 0.9, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
               className="mt-5 max-w-[58ch] text-[clamp(.97rem,1.7vw,1.13rem)] text-craie/80"
             >
-              L'ardoise change avec le marché, la terrasse ne change jamais. Pizzas au feu de bois,
+              L'ardoise change avec le marché, la terrasse ne change jamais. Pizzas maison,
               tartare préparé minute, frites maison — et le café dès 7h du matin.
             </motion.p>
             <motion.div
@@ -145,7 +145,7 @@ export default function Ardoise() {
         itemClassName="font-caveat text-[32px] font-bold text-craie/90"
         separator={<span className="text-laiton text-[17px]">✦</span>}
         duration="44s"
-        items={['Pizzas au feu de bois dès 11,50 €', 'Tartare de bœuf', 'Entrecôtes grillées', "Terrasse sous l'olivier", 'Café dès 7h']}
+        items={['Pizzas maison dès 11,50 €', 'Tartare de bœuf', 'Entrecôtes grillées', "Terrasse sous l'olivier", 'Café dès 7h']}
       />
 
       {/* la maison */}
@@ -224,7 +224,7 @@ export default function Ardoise() {
             <span className="h-px w-6 bg-laiton" />La spécialité de la maison
           </span>
           <div className="font-caveat text-[clamp(5rem,17vw,13rem)] font-bold leading-[.8] text-laiton">Pizzas dès 11,50 €</div>
-          <h2 className="mb-3 mt-3.5 font-caveat text-[clamp(2.1rem,4.6vw,3.6rem)] font-bold">Au feu de bois</h2>
+          <h2 className="mb-3 mt-3.5 font-caveat text-[clamp(2.1rem,4.6vw,3.6rem)] font-bold">Pizzas maison</h2>
           <p className="mx-auto mb-7 max-w-[46ch] text-craie/72">
             « Énorme pizza qui prend toute l'assiette, avec une très bonne odeur qui s'en dégage » — c'est ce que nos clients écrivent.
           </p>

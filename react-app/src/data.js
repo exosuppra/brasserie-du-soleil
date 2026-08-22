@@ -76,7 +76,7 @@ export const CARTE = [
   {
     key: 'pizzas',
     title: 'Pizzas — base tomate',
-    sub: 'Au feu de bois',
+    sub: 'Pâte fine, garniture généreuse',
     photo: pizzaLarge,
     desc: 'La signature de la maison : pâte fine et garnitures généreuses.',
     items: [
@@ -90,7 +90,7 @@ export const CARTE = [
   {
     key: 'pizzas-creme',
     title: 'Pizzas — base crème',
-    sub: 'Au feu de bois',
+    sub: 'Pâte fine, garniture généreuse',
     photo: pizza,
     desc: 'Les gourmandes, sur une base crème fraîche.',
     items: [

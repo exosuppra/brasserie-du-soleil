@@ -18,7 +18,7 @@ const NAV = [
 
 const SOMMAIRE = [
   { no: '01', h: '#maison', t: 'La maison', d: 'Une adresse de village ouverte tous les jours depuis 2017.' },
-  { no: '02', h: '#carte', t: 'La carte', d: 'Pizzas au feu de bois, tartare minute, pâtes et planches.' },
+  { no: '02', h: '#carte', t: 'La carte', d: 'Pizzas maison, tartare minute, pâtes et planches.' },
   { no: '03', h: '#avis', t: 'Les avis', d: 'Plus de 1 400 retours publiés sur Google et Tripadvisor.' },
   { no: '04', h: '#infos', t: 'Venir', d: 'Rond-point du Grysélis, parking gratuit à 95 m.' },
 ]
@@ -92,7 +92,7 @@ export default function Comptoir() {
               transition={{ duration: 0.9, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="max-w-[48ch] text-[clamp(.97rem,1.7vw,1.13rem)] font-light text-creme/85"
             >
-              Cuisine française aux accents provençaux, pizzas au feu de bois et terrasse à l'ombre de l'olivier.
+              Cuisine française aux accents provençaux, pizzas maison et terrasse à l'ombre de l'olivier.
               Au {RESTO.addressShort.toLowerCase()}, ouvert tous les jours du premier café au dernier verre.
             </motion.p>
             <motion.div
@@ -246,7 +246,7 @@ export default function Comptoir() {
           <div className="my-2.5 font-bricolage text-[clamp(3.4rem,12vw,9.5rem)] font-extrabold leading-[.86] tracking-[-.05em]">
             Pizzas dès <NumberTicker value={11.5} decimals={2} suffix=" €" />
           </div>
-          <h2 className="mb-3.5 font-bricolage text-[clamp(1.4rem,3vw,2.4rem)] font-bold tracking-[-.03em]">Au feu de bois</h2>
+          <h2 className="mb-3.5 font-bricolage text-[clamp(1.4rem,3vw,2.4rem)] font-bold tracking-[-.03em]">Pizzas maison</h2>
           <p className="mx-auto mb-7 max-w-[46ch] text-base font-light text-creme/78">
             « Énorme pizza qui prend toute l'assiette, avec une très bonne odeur qui s'en dégage » — c'est ce que nos clients écrivent.
           </p>
